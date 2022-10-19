@@ -1,4 +1,5 @@
-﻿namespace Library
+﻿using System;
+namespace Library
 {
     public class Contact
     {
@@ -9,10 +10,13 @@
             this.Email = email;
         }
 
+        public string TwitterID { get; set; } // ID del usuario de twitter (opcional)
+        public bool TwitterAcount { get; set; } // Para verificar que tiene cuenta de Twitter
         public string Name { get; set; }
 
         public string Phone { get; set; }
 
         public string Email { get; set; }
+
     }
 }
