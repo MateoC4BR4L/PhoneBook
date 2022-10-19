@@ -4,7 +4,7 @@ namespace Library
 {
     public class Phonebook
     {
-        private List<Contact> persons;
+        public List<Contact> persons{get;}
 
         public Phonebook(Contact owner)
         {
@@ -13,6 +13,11 @@ namespace Library
         }
 
         public Contact Owner { get; }
+
+        public void addContact(string nombre, string tel, string email){
+            Contact newContact = new Contact(nombre, tel, email);
+            persons.Add(newContact);
+        }
 
         public List<Contact> Search(string[] names)
         {

@@ -7,17 +7,19 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // Crear el contacto dueño
+            Contact jefe = new Contact("Mateo", "+59898253898", "mateocabralduarte123@gmail.com");
 
-            // Crear la lista de contactos
+            Phonebook ContactList = new Phonebook(jefe);
 
-            // Agregar contactos a la lista
+            ContactList.addContact("Pepe", "+59898253898", "sapopepe@gmail.com");
+            ContactList.addContact("Juan", "+59898253898", "juanito@gmail.com");
 
-            // Enviar un correo a algunos contactos
+            WhatsAppChannel wasapCanal = new WhatsAppChannel();
+            Console.WriteLine(wasapCanal.SendMessage(ContactList.persons, "Buenos dias."));
 
-            // Enviar un WhatsApp a algunos contactos
+            TwitterChannel twitterCanal = new TwitterChannel();
+            Console.WriteLine(twitterCanal.SendMessage(ContactList.persons, "Buenos dias."));
 
-            // Enviar un SMS a algunos contactos
         }
     }
 }
