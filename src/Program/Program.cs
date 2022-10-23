@@ -21,7 +21,6 @@ namespace Program
 
             TwitterChannel twitterCanal = new TwitterChannel();
             Console.WriteLine(twitterCanal.SendMessage(ContactList.persons, "Buenos dias."));
-
         }
     }
 }

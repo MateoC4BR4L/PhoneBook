@@ -27,7 +27,7 @@ namespace Library
                 {
                     if(i.TwitterAcount == false) // Si el usuario no tiene una cuenta de Twitter asociada
                     {
-                        i.TwitterID = "<" + id + ">"; // Se agrega un ID de Twitter al contacto
+                        i.TwitterID = id ; // Se agrega un ID de Twitter al contacto
                         i.TwitterAcount = true; // Confirmamos que posee cuenta de Twitter el contacto                                            
                         Console.WriteLine("ID de Twitter agregado exitosamente!");
                     }
